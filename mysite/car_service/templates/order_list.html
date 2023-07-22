@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Order list</h1>
+  {% if order_list %}
+  <ul>
+    {% for order in order_list %}
+      <li>
+        <a href="{{ order.id }}">{{ order.id }}</a> ({{order.auto_id}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>No active orders.</p>
+  {% endif %}
+  <div class="pagination">
+      <span class="step-links">
+          {% if page_obj.has_previous %}
+              <a href="?page=1">&laquo; first</a>
+              <a href="?page={{ page_obj.previous_page_number }}">back</a>
+          {% endif %}
+
+          <span class="current">
+              {{ page_obj.number }} from {{ page_obj.paginator.num_pages }}
+          </span>
+
+          {% if page_obj.has_next %}
+              <a href="?page={{ page_obj.next_page_number }}">next</a>
+              <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+          {% endif %}
+      </span>
+  </div>
+{% endblock %}

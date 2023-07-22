@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+/venv
+/.idea
+/mysite/db.sqlite3
+/mysite/mysite/__pycache__
+/mysite/car_service/__pycache__

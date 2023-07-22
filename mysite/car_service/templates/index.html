@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+  <h1>{% trans "Car service" %}</h1>
+  <p><b>{% trans "Service statistics:" %}</b></p>
+  <ul>
+    <li><strong>{% trans "Count of available services:" %}</strong>&nbsp;&nbsp;{{ count_services }}</li>
+    <li><strong>{% trans "Count of service clients cars:" %}</strong>&nbsp;&nbsp;{{ count_client_autos }}</li>
+    <li><strong>{% trans "Count of completed orders:" %}</strong>&nbsp;&nbsp;{{ count_completed_orders }}</li>
+  </ul>
+  <p>{% trans "You are visiting us" %} {{ num_visits }} {% trans "time." %}</p>
+{% endblock %}

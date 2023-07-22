@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <img src="{{ clientauto.cover.url }}" style="margin-bottom: 20px;" height="300">
+    <div class="container auto">
+    <h4>Clieant: {{ clientauto.client }}</h4>
+    <p><u>Model:</u> {{ clientauto.car_model_id }}</p>
+    <p><u>Plate number:</u> {{ clientauto.plate_number }}</p>
+    <p><u>VIN code:</u> {{ clientauto.vin_code }}</p>
+    <hr/>
+        <p>{{ clientauto.description | safe }}</p>
+    </hr>
+    </div>
+{% endblock %}
