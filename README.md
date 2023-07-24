@@ -7,8 +7,7 @@ The first Django website project created during the CodeAcademy course.
 The website was created to familiarize with:
 - Django framework
 - HTML templates
-- SQLite 
-- Django REST framework 
+- SQLite
 
 **HOW TO INSTAL AND RUN**
 
